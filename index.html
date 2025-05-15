@@ -5,7 +5,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Theography | Luxury Photography</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
+    <style> 
+    
+
+/* Updated Booking Section */
+.booking {
+    padding: 60px 0;
+}
+
+.booking .container {
+    padding: 0 20px;
+}
+
+.grid-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.form-group.full-width {
+    grid-column: unset;
+}
+
+.booking-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.booking-text p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.booking-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Updated Footer */
+footer {
+    padding: 50px 0 20px;
+}
+
+.footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.footer-col {
+    margin-bottom: 30px;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.copyright {
+    padding-top: 20px;
+    font-size: 0.8rem;
+}
+
+.copyright a {
+    color: var(--medium);
+    text-decoration: underline;
+}
+
+/* Tablet View */
+@media (min-width: 768px) {
+    .booking {
+        padding: 80px 0;
+    }
+    
+    .grid-2 {
+        flex-direction: row;
+        gap: 40px;
+    }
+    
+    .booking-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    
+    .form-group.full-width {
+        grid-column: span 2;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Desktop View */
+@media (min-width: 992px) {
+    .booking .container {
+        padding: 0 40px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
         :root {
             --dark: #1a1a1a;
             --darker: #0d0d0d;
@@ -224,6 +346,8 @@
     cursor: pointer;
     transition: var(--transition);
     margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .btn:hover {
@@ -653,6 +777,134 @@
                     opacity: 1;
                     transform: translateY(0);
                 }
+
+                /* Invite Section Styling */
+.invite {
+    background-color: #0a0a0a;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.invite .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.booking-text {
+    text-align: center;
+    max-width: 800px;
+    padding: 0 20px;
+    z-index: 2;
+}
+
+.booking-text h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+}
+
+.booking-text p {
+    color: #b0b0b0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.invite img {
+    width: 200px;
+    height: auto;
+    opacity: 0.9;
+    transition: all 0.4s ease;
+    z-index: 2;
+    margin-left: 7px;
+    border-radius: 14px;
+}
+
+.invite img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+
+/* Decorative Elements */
+.invite::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0) 70%);
+    z-index: 1;
+}
+
+/* Tablet View */
+@media (min-width: 768px) {
+    .invite .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+    }
+    
+    .booking-text {
+        text-align: left;
+        padding: 0;
+        flex: 1;
+    }
+    
+    .booking-text h2 {
+        font-size: 3rem;
+    }
+    
+    .invite img {
+        width: 250px;
+    }
+}
+
+/* Desktop View */
+@media (min-width: 992px) {
+    .invite {
+        padding: 120px 0;
+    }
+    
+    .booking-text h2 {
+        font-size: 3.5rem;
+    }
+    
+    .invite img {
+        width: 300px;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.booking-text h2, 
+.booking-text p,
+.invite img {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.booking-text p {
+    animation-delay: 0.2s;
+}
+
+.invite img {
+    animation-delay: 0.4s;
+}
     </style>
 </head>
 <body>
@@ -858,15 +1110,16 @@
                         </div>
                     </form>
                 </div>
-                <div>
-                    <div class="booking-text">
-                        <h2>Come Through and Let Me Capture Your Precious Moments</h2>
-                        <p>Every session is a collaborative experience where we work together to create images that reflect your true essence. Whether it's a special occasion or simply a desire to document this moment in your life, I'm here to help you create something beautiful and lasting.</p>
-                    </div>
-                    <img src="images/Logo Design.png" alt="logo">
-                </div>
+                
             </div>
         </div>
+    </section>
+
+    <section class="invite">
+        <div class="booking-text">
+            <h2>Capturing Your Precious Moments</h2>
+        </div>
+        <img src="images/Logo Design.png" alt="logo">
     </section>
 
     <!-- Footer -->
@@ -993,6 +1246,30 @@
         
         animateOnScroll();
     });
+
+
+    // Adjust form layout on resize
+function adjustFormLayout() {
+    const form = document.querySelector('.booking-form');
+    const windowWidth = window.innerWidth;
+    
+    if (windowWidth >= 768) {
+        form.style.display = 'grid';
+        form.style.gridTemplateColumns = '1fr 1fr';
+        document.querySelectorAll('.form-group.full-width').forEach(el => {
+            el.style.gridColumn = 'span 2';
+        });
+    } else {
+        form.style.display = 'flex';
+        form.style.flexDirection = 'column';
+    }
+}
+
+// Initial adjustment
+window.addEventListener('DOMContentLoaded', adjustFormLayout);
+
+// Adjust on window resize
+window.addEventListener('resize', adjustFormLayout);
     </script>
 </body>
 </html>
