@@ -423,6 +423,25 @@ footer {
         .gallery-item:hover img {
             transform: scale(1.05);
         }
+        .instagram-button-wrapper {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .instagram-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .instagram-button:hover {
+            background-color: #c72d60;
+        }
 
         /* Services Section */
         .services-list {
@@ -450,6 +469,132 @@ footer {
         .service-item p {
             color: var(--medium);
         }
+
+        /* Testimonials Section */
+    .testimonials {
+        padding: 5rem 0;
+        background-color: var(--darker);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .testimonials::before {
+        content: "";
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+        top: -100px;
+        right: -100px;
+        opacity: 0.1;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
+        color: var(--white);
+    }
+    
+    .section-title span {
+        color: var(--medium);
+        font-weight: 300;
+    }
+    
+    .section-subtitle {
+        text-align: center;
+        color: var(--medium);
+        margin-bottom: 3rem;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    
+    .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+    
+    .testimonial-card {
+        background: var(--dark);
+        border-radius: 10px;
+        padding: 2rem;
+        transition: var(--transition);
+        border: 1px solid rgba(255,255,255,0.05);
+    }
+    
+    .testimonial-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    }
+    
+    .testimonial-content {
+        position: relative;
+        margin-bottom: 2rem;
+    }
+    
+    .quote-icon {
+        position: absolute;
+        font-size: 5rem;
+        line-height: 1;
+        color: var(--medium);
+        opacity: 0.2;
+        top: -1.5rem;
+        left: -0.5rem;
+        font-family: Georgia, serif;
+    }
+    
+    .testimonial-text {
+        position: relative;
+        font-size: 1rem;
+        color: var(--light);
+        font-style: italic;
+        line-height: 1.7;
+        padding-top: 1rem;
+    }
+    
+    .client-info {
+        display: flex;
+        align-items: center;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding-top: 1.5rem;
+    }
+    
+    .client-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center;
+        margin-right: 1rem;
+        border: 2px solid var(--medium);
+    }
+    
+    .client-details h4 {
+        color: var(--white);
+        font-size: 1rem;
+        margin-bottom: 0.2rem;
+    }
+    
+    .client-meta {
+        color: var(--medium);
+        font-size: 0.8rem;
+    }
+    
+    @media (max-width: 768px) {
+        .section-title {
+            font-size: 2rem;
+        }
+        
+        .testimonial-grid {
+            grid-template-columns: 1fr;
+            padding: 0 1rem;
+        }
+    }
 
         /* Booking Section */
         .booking-form {
@@ -991,32 +1136,42 @@ footer {
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="gallery" id="gallery">
-        <div class="container">
-            <h2 class="section-title">Recent Work</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="images/Aniversary-shoot.jpg" alt="photoshoot" class="gallery-image">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/Dress-shoot.jpg" alt="photoshoot" class="gallery-image">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/lifestyle-shoot.jpg" alt="photoshoot" class="gallery-image">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/lifestyle-shoot2.jpg" alt="photoshoot" class="gallery-image">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/Matric-shoot.jpg" alt="photoshoot" class="gallery-image">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/matric-shoot2.jpg" alt="photoshoot" class="gallery-image">
-                </div>
+  <!-- Gallery Section -->
+<section class="gallery" id="gallery">
+    <div class="container">
+        <h2 class="section-title">Recent Work</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/Aniversary-shoot.jpg" alt="photoshoot" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+                <img src="images/Dress-shoot.jpg" alt="photoshoot" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+                <img src="images/lifestyle-shoot.jpg" alt="photoshoot" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+                <img src="images/lifestyle-shoot2.jpg" alt="photoshoot" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+                <img src="images/Matric-shoot.jpg" alt="photoshoot" class="gallery-image">
+            </div>
+            <div class="gallery-item">
+                <img src="images/matric-shoot2.jpg" alt="photoshoot" class="gallery-image">
             </div>
         </div>
-    </section>
+
+        <!-- Instagram Button -->
+        <div class="instagram-button-wrapper">
+            <a href="https://www.instagram.com/theography____/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D#" 
+               target="_blank" 
+               class="instagram-button">
+               See more on Instagram
+            </a>
+        </div>
+    </div>
+</section>
+
 
     <!-- Services Section -->
     <section class="services" id="services">
@@ -1055,6 +1210,56 @@ footer {
                 <div class="service-item animate delay-1">
                     <h3>Fashion & Branding</h3>
                     <p>High-end photography for models, influencers, and personal branding.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Client <span>Testimonials</span></h2>
+            <p class="section-subtitle">What people say about Theography</p>
+            
+            <div class="testimonial-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">Theography really delivered, the shots are stunning, and the attention to detail in the editing is next level. Highly recommend!</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-details">
+                            <h4>Jennifer M</h4>
+                            <p class="client-meta">Wedding Clients</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">Theo took amazing photos we absolutely love them! The editing is clean, exactly what we wanted</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-details">
+                            <h4>Khaya Z</h4>
+                            <p class="client-meta">Birthday Shoot client</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">So happy with the photos Theo captured! He really brought our vision to life and made everything look even better than we imagined.</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-details">
+                            <h4>Andile J</h4>
+                            <p class="client-meta">Clothing brand Client</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
